@@ -3,6 +3,8 @@
 ## Project Requirements
  * [x] Install and configure the RSpec test framework with Capybara
  * [ ] Using TDD, install and integrate the Devise library for authentication and create a `User class`.
+ *    -Devise install and User created
+ *    
  * [ ] Using BDD, create integration specs that `test for logging in and registering` on custom URLs.
  * [ ] Using TDD, implement an `Employee class` that inherits from the User class using single table 
  *     inheritance and add at least two attributes that differentiates an Employee from a User.
