@@ -12,4 +12,9 @@ RSpec.describe User, type: :model do
     user.email = nil
     expect(user).to_not be_valid
   end
+  
+  it 'Employee can be created' do
+    user = Employee.create(name: "Test", email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf")
+    expect(user).to be_valid
+  end
 end
