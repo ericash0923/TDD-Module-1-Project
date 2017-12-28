@@ -13,8 +13,18 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_valid
   end
   
-  it 'Employee can be created' do
-    user = Employee.create(name: "Test", email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf")
-    expect(user).to be_valid
+  describe 'Employee details' do
+    before do
+      @employee = Employee.create(name: "Test", email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf",
+                                hours: 35, phone: 4545)
+    end
+    
+    it 'Employment type Full or Part' do
+      expect(@employee.position).to eq('Part-Time')
+    end
+    
+    it 'Employee phone number' do
+     expect(@employee.phone_number).to eq("718-555-#{@employee.phone}")
+    end
   end
 end
